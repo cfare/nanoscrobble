@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> nanoscrobble </title>
+  <link rel="stylesheet" type="text/css" href="nano.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>	
+    <script
+		  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+		  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+		  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+  <script type="text/javascript" src="nano.js"></script>
+</head>
+
+<body>
+<div id='header'>
+NanoScrobble
+</div>
+
+<div id='lastfm-connect'>
+You must connect to last.fm to use this site. <a href='login'>Click here to connect.</a>
+</div>
+
+<div id='search-container' style="display: none;">
+<div id='album-search'>
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Find an album" id="searchQuery"/>
+      <button type="submit" class="searchButton" onClick='onSearch()'>
+        <img src="icon-search.png" />
+     </button>
+   </div>
+<br/>
+<br/>
+</div>
+
+
+<div id='album-results'>
+<div id='album-result-card-template' class='album-result-card' style="display: none;">
+  <div class='album-result-img'></div>
+  <div class='album-result-info'>
+      <div class='album-result-title'></div><br/>
+      <div class='album-result-artist'></div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id='album-search-load' style="display: none;">
+Fetching album search results...
+</div>
+<div id='album-listing-load' style="display: none;">
+Fetching album details...
+</div>
+
+<div id='album-container' style="display: none;">
+
+<div id='back-button' onClick='onBackClick()'>
+<img src="icon-back.png" style="vertical-align:middle; padding:5px"/>Back to search
+</div>
+
+<div id='album-listing-box'>
+<div id='album-listing-details'>
+<div id='album-listing-img'>
+    <div id='album-listing-img-overlay'>
+        <div id='album-listing-title'>GOD OF LONDON</div>
+        <div id='album-listing-artist'>James Ferraro</div>
+    </div>
+</div>
+<div id='album-listing-tracklist'>
+    <div class='album-listing-track' id='album-listing-track-template' style="display: none;">
+        <div class='album-listing-track-num'>1.</div>
+        <div class='album-listing-track-title'>Some Title</div>
+        <div class='album-listing-track-duration'>(0:00)</div>
+    </div>
+</div>
+<div id='time-setting'>
+Scrobble end time:<br/>
+
+    <input type="radio" id="timeChoiceNow"
+     name="timeSetting" value="now" onClick="onTimeNowSelected()" checked>
+    <label for="timeChoiceNow">Now</label>
+
+    <input type="radio" id="timeChoiceCustom"
+     name="timeSetting" value="custom" onClick="onTimeCustomSelected()">
+    <label for="timeChoiceCustom">Custom</label>
+
+<div id='time-selector' style="display: none;">
+
+	<p><input type="text" name="time-selector-input" id="time-selector-input" value=""/></p>
+	
+</div>
+</div>
+<div id='scrobble-container'>
+<button id='scrobble-btn' type="submit" onClick='onScrobbleClick()'>Scrobble!</button>
+<div id='scrobble-status'></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id='footer'>
+NanoScrobble, last updated 27/12/17
+</div>
+</body>
+
+</html>

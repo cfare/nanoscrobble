@@ -1,0 +1,249 @@
+ @import url('https://fonts.googleapis.com/css?family=PT+Serif|Mukta+Malar');
+
+body {
+	background: #000000;
+    color: #FFFFFF;
+	font-family: 'PT Serif', serif;
+	font-size: 11pt;
+
+    text-align: center;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    font-family: 'Mukta Malar', sans-serif;
+    text-shadow: 1px 0px 0px #11C;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+#footer {
+    color: #999999;
+}
+
+.album-results {
+	width: 95%;
+    text-align: left;
+}
+
+/* Album result */
+.album-result-card {
+    height: 75px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px;
+    background: #5D5D5D;
+    display: inline-block;
+    /*justify-content: space-between;*/
+    cursor: pointer;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.album-result-card:hover {
+    background: #6F6F6F;
+}
+
+.album-result-img {
+    display: inline-block;
+    background: #CCC;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*flex: 0 0 75px;*/
+    border-radius: 5px;
+    float: left;
+    width: 75px;
+    height: 75px
+}
+
+.album-result-info {
+    text-align: right;
+    margin: 5px;
+}
+
+.album-result-title {
+    display: inline;
+    font-weight: bold;
+}
+
+.album-result-artist {
+    display: inline;
+}
+
+
+.album-results-pgnext {
+
+}
+
+.album-results-pgprev {
+
+}
+
+
+/* Search box */
+#album-search {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+}
+
+.search {
+  width: 100%;
+  position: relative;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00347F;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #222222;
+  background: #DDDDDD;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00347F;
+  background: #00347F;
+  /*background: url('/icon-search.png')*/
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#back-button {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  background: #00347F;
+  border: 1px solid #00347F;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 20px;
+}
+
+#back-button:hover {
+  background: #00448F;
+}
+
+#album-listing-box {
+  padding: 5px;
+  min-width: 275px;
+  background: #00347F;
+  border: 1px solid #00347F;
+  border-radius: 5px;
+  margin: auto;
+  display: inline-block
+}
+
+#album-listing-img {
+    background: #CCC;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+}
+
+#album-listing-img-overlay {
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    font-family: 'Mukta Malar', sans-serif;
+    text-shadow: 1px 1px 2px black; 
+
+}
+
+#album-listing-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#album-listing-artist {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 100%
+}
+
+#album-listing-tracklist {
+    padding-top: 10px;
+}
+
+.album-listing-track {
+    text-align: left;
+    justify-content: left;
+}
+
+.album-listing-track-num {
+    display: inline-block;
+}
+
+.album-listing-track-title {
+    display: inline-block;
+}
+
+.album-listing-track-duration {
+    display: inline-block;
+    color: #aaaaaa;
+    float: right;
+    padding-left: 10px;
+}
+
+#scrobble-btn {
+  -webkit-border-radius: 12;
+  -moz-border-radius: 12;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #073d61;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Mukta Malar', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+#scrobble-container {
+    height: 60px;
+}
+
+#scrobble-status {
+  display: inline-block; /* fix this */
+  vertical-align: middle;
+  width: 100%;
+}
+
+#time-setting {
+  font-family: 'Mukta Malar', sans-serif;
+}
