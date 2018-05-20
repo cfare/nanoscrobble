@@ -1,6 +1,6 @@
-## Unreleased
+## 2018-05-20 - v0.0.2
 ### Added
-- Mobile-friendly layout
+- More mobile-friendly layout
 ### Changed
 - Fix pressing enter in the search box not performing the search
 

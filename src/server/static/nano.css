@@ -30,6 +30,10 @@ a:hover {
     color: #999999;
 }
 
+#footer a{
+    color: #999999;
+}
+
 .album-results {
 	width: 95%;
     text-align: left;
