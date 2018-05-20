@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
   <script type="text/javascript" src="nano.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -24,10 +25,12 @@ You must connect to last.fm to use this site. <a href='ns/login'>Click here to c
 <div id='search-container' style="display: none;">
 <div id='album-search'>
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="Find an album" id="searchQuery"/>
-      <button type="submit" class="searchButton" onClick='onSearch()'>
-        <img src="icon-search.png" />
-     </button>
+      <form>
+        <input type="text" class="searchTerm" placeholder="Find an album" id="searchQuery"/>
+        <button type="submit" class="searchButton" onClick='onSearch()'>
+          <img src="icon-search.png" />
+      </button>
+     </form>
    </div>
 <br/>
 <br/>
@@ -62,15 +65,15 @@ Fetching album details...
 <div id='album-listing-details'>
 <div id='album-listing-img'>
     <div id='album-listing-img-overlay'>
-        <div id='album-listing-title'>GOD OF LONDON</div>
-        <div id='album-listing-artist'>James Ferraro</div>
+        <div id='album-listing-title'></div>
+        <div id='album-listing-artist'></div>
     </div>
 </div>
 <div id='album-listing-tracklist'>
     <div class='album-listing-track' id='album-listing-track-template' style="display: none;">
-        <div class='album-listing-track-num'>1.</div>
-        <div class='album-listing-track-title'>Some Title</div>
-        <div class='album-listing-track-duration'>(0:00)</div>
+        <div class='album-listing-track-num'></div>
+        <div class='album-listing-track-title'></div>
+        <div class='album-listing-track-duration'></div>
     </div>
 </div>
 <div id='time-setting'>
