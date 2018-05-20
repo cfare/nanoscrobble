@@ -5,9 +5,9 @@
 // * Search icon
 
 // Global stuff
-var lastfmLookupURL   = "/search-lastfm"
-var lastfmAlbumURL    = "/album-info-lastfm"
-var lastfmScrobbleURL = "/do-scrobble/"
+var lastfmLookupURL   = "ns/search-lastfm"
+var lastfmAlbumURL    = "ns/album-info-lastfm"
+var lastfmScrobbleURL = "ns/do-scrobble/"
 var lastfmUserAgent   = "NanoScrobblerClient/0.01"
 var searchResults = []
 var selectedAlbumTracks = []
