@@ -1,13 +1,12 @@
 // NanoScrobbler
-// (C) Copyright 2017 Callum Fare
-
-// TODO:
-// * Search icon
+// (C) Copyright 2017-2018 Callum Fare
 
 // Global stuff
-var lastfmLookupURL   = "ns/search-lastfm"
-var lastfmAlbumURL    = "ns/album-info-lastfm"
-var lastfmScrobbleURL = "ns/do-scrobble/"
+// Set urlPrefix to "" when testing locally.
+var urlPrefix         = ""
+var lastfmLookupURL   = urlPrefix + "/search-lastfm"
+var lastfmAlbumURL    = urlPrefix + "/album-info-lastfm"
+var lastfmScrobbleURL = urlPrefix + "/do-scrobble/"
 var lastfmUserAgent   = "NanoScrobblerClient/0.01"
 var searchResults = []
 var selectedAlbumTracks = []
@@ -47,7 +46,6 @@ function onSearch()
     if (searchInProgress) return;
     document.getElementById('album-search-load').style.display = "block";
     $("#album-result-card-template").nextAll().remove();
-    selectedAlbumTracks = [];
     searchInProgress = true;
 
     var searchTerm = document.getElementById("searchQuery").value;
@@ -76,6 +74,7 @@ function onResultClick(resultArtist, resultTitle)
     document.getElementById('scrobble-btn').style.display = 'inline-block';
     document.getElementById('time-setting').style.display = 'block';
     document.getElementById('scrobble-status').innerHTML = "";
+    selectedAlbumTracks = [];
 
     // Send query to search backend:
     $.ajax({
