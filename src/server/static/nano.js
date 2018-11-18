@@ -3,7 +3,7 @@
 
 // Global stuff
 // Set urlPrefix to "" when testing locally.
-var urlPrefix         = ""
+var urlPrefix         = "ns"
 var lastfmLookupURL   = urlPrefix + "/search-lastfm"
 var lastfmAlbumURL    = urlPrefix + "/album-info-lastfm"
 var lastfmScrobbleURL = urlPrefix + "/do-scrobble/"
