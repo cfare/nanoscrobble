@@ -9,7 +9,8 @@ app = Flask(__name__)
 LASTFM_API_URL     = "https://ws.audioscrobbler.com/2.0/"
 LASTFM_API_KEY     =  nanoconfig.lastfm_api_key()
 LASTFM_API_SECRET  =  nanoconfig.lastfm_api_secret()
-LASTFM_LOGIN_URL   = "https://www.last.fm/api/auth?api_key={0}&cb=https://localhost:5000/authenticate-lastfm/".format(LASTFM_API_KEY)
+BASE_URL           = "https://scrobble.fare.scot"
+LASTFM_LOGIN_URL   = "https://www.last.fm/api/auth?api_key={0}&cb={1}/authenticate-lastfm/".format(LASTFM_API_KEY, BASE_URL)
 REDIRECT_BODY      = "<html><head><script type='text/javascript'>window.location.replace(\"{0}\")</script></head></html>"
 USER_AGENT = "NanoScrobblerSearchServer/0.0.1"
 DEBUG_MODE = True
@@ -34,6 +35,7 @@ def make_api_sig(param_dict):
     return md5(sig.encode('utf8')).hexdigest()
 
 # Front end routing ------------------------------------------------------------
+# Only used for local testing, use WSGI server for production deployment.
 @app.route("/")
 def static_index():
     return app.send_static_file('index.html')
@@ -55,6 +57,7 @@ def static_iconerror():
 @app.route("/icon-search.png")
 def static_iconsearch():
     return app.send_static_file('icon-search.png')
+# -----------------------------------------------------------------------------
 
 @app.route("/login")
 def redirect_login():
