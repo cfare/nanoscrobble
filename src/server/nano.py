@@ -9,7 +9,7 @@ app = Flask(__name__)
 LASTFM_API_URL     = "https://ws.audioscrobbler.com/2.0/"
 LASTFM_API_KEY     =  nanoconfig.lastfm_api_key()
 LASTFM_API_SECRET  =  nanoconfig.lastfm_api_secret()
-BASE_URL           = "https://scrobble.fare.scot"
+BASE_URL           = "https://scrobble.fare.scot/ns"
 LASTFM_LOGIN_URL   = "https://www.last.fm/api/auth?api_key={0}&cb={1}/authenticate-lastfm/".format(LASTFM_API_KEY, BASE_URL)
 REDIRECT_BODY      = "<html><head><script type='text/javascript'>window.location.replace(\"{0}\")</script></head></html>"
 USER_AGENT = "NanoScrobblerSearchServer/0.0.1"
