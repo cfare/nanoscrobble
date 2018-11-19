@@ -1,3 +1,7 @@
+## 2018-11-19 - v0.0.3
+- Fix issue where additional scrobbles were sometimes accidentally sent
+- Fix login not always redirecting back to the website correctly
+
 ## 2018-05-20 - v0.0.2
 ### Added
 - More mobile-friendly layout
